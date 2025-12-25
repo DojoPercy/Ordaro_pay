@@ -36,14 +36,14 @@ export default function TermsPage() {
               <li>• Using the materials for any commercial purpose or for any public display</li>
               <li>• Attempting to decompile or reverse engineer any software contained on the site</li>
               <li>• Removing any copyright or other proprietary notations from the materials</li>
-              <li>• Transferring the materials to another person or "mirroring" the materials on any other server</li>
+              <li>• Transferring the materials to another person or &quot;mirroring&quot; the materials on any other server</li>
             </ul>
           </section>
 
           <section>
             <h2 className="text-2xl font-bold font-heading text-slate-900 mb-4">3. Disclaimer</h2>
             <p className="text-slate-600 leading-relaxed">
-              The materials on Ordaro Pay are provided on an 'as is' basis. Ordaro makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+              The materials on Ordaro Pay are provided on an &apos;as is&apos; basis. Ordaro makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
             </p>
           </section>
 
@@ -64,7 +64,7 @@ export default function TermsPage() {
           <section>
             <h2 className="text-2xl font-bold font-heading text-slate-900 mb-4">6. Links</h2>
             <p className="text-slate-600 leading-relaxed">
-              Ordaro has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Ordaro of the site. Use of any such linked website is at the user's own risk.
+              Ordaro has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by Ordaro of the site. Use of any such linked website is at the user&apos;s own risk.
             </p>
           </section>
 
@@ -94,7 +94,7 @@ export default function TermsPage() {
               <div>
                 <h3 className="font-bold text-slate-900 mb-2">Payment Processing</h3>
                 <p className="text-slate-600">
-                  Payments are processed through Paystack, a certified payment processor. All transactions are subject to Paystack's terms and conditions.
+                  Payments are processed through Paystack, a certified payment processor. All transactions are subject to Paystack&apos;s terms and conditions.
                 </p>
               </div>
               <div>
