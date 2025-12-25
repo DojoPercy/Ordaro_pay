@@ -28,11 +28,9 @@ class ApiClient {
     // Request interceptor
     this.client.interceptors.request.use(
       (config) => {
-        console.log(`[API] ${config.method?.toUpperCase()} ${config.url}`);
         return config;
       },
       (error) => {
-        console.error('[API] Request error:', error);
         return Promise.reject(error);
       }
     );
@@ -40,11 +38,9 @@ class ApiClient {
     // Response interceptor
     this.client.interceptors.response.use(
       (response) => {
-        console.log(`[API] Response ${response.status} from ${response.config.url}`);
         return response;
       },
       (error: AxiosError) => {
-        console.error('[API] Response error:', error.message);
         return Promise.reject(this.handleError(error));
       }
     );
@@ -78,7 +74,6 @@ class ApiClient {
       const response = await this.client.get<Order>(`/orders/${orderId}`);
       return response.data;
     } catch (error) {
-      console.error(`Failed to fetch order ${orderId}:`, error);
       throw error;
     }
   }
@@ -94,7 +89,6 @@ class ApiClient {
       );
       return response.data;
     } catch (error) {
-      console.error('Failed to verify order:', error);
       throw error;
     }
   }
@@ -109,7 +103,6 @@ class ApiClient {
       );
       return response.data;
     } catch (error) {
-      console.error(`Failed to get payment status for ${orderId}:`, error);
       throw error;
     }
   }
@@ -124,7 +117,6 @@ class ApiClient {
       );
       return response.data;
     } catch (error) {
-      console.error(`Failed to get payment link for ${orderId}:`, error);
       throw error;
     }
   }

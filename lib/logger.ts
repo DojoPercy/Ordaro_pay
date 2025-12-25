@@ -10,11 +10,9 @@ interface LogEntry {
 
 class Logger {
   private logLevel: LogLevel;
-  private isDevelopment: boolean;
 
   constructor() {
     this.logLevel = (process.env.LOG_LEVEL as LogLevel) || 'info';
-    this.isDevelopment = process.env.NODE_ENV === 'development';
   }
 
   private shouldLog(level: LogLevel): boolean {
@@ -40,7 +38,6 @@ class Logger {
       // Server-side: could send to external logging service
       if (entry.level === 'error' && process.env.NEXT_PUBLIC_ENABLE_ERROR_TRACKING) {
         // Send to Sentry or similar
-        console.error('[LOGGING SERVICE]', entry);
       }
     }
   }

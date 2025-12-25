@@ -27,11 +27,9 @@ class PaymentClient {
     // Request interceptor
     this.client.interceptors.request.use(
       (config) => {
-        console.log(`[Payment API] ${config.method?.toUpperCase()} ${config.url}`);
         return config;
       },
       (error) => {
-        console.error('[Payment API] Request error:', error);
         return Promise.reject(error);
       }
     );
@@ -39,11 +37,9 @@ class PaymentClient {
     // Response interceptor
     this.client.interceptors.response.use(
       (response) => {
-        console.log(`[Payment API] Response ${response.status} from ${response.config.url}`);
         return response;
       },
       (error: AxiosError) => {
-        console.error('[Payment API] Response error:', error.message);
         return Promise.reject(this.handleError(error));
       }
     );
@@ -82,7 +78,6 @@ class PaymentClient {
       );
       return response.data;
     } catch (error) {
-      console.error('Failed to initialize payment:', error);
       throw error;
     }
   }
@@ -97,7 +92,6 @@ class PaymentClient {
       );
       return response.data;
     } catch (error) {
-      console.error(`Failed to get payment status for ${orderId}:`, error);
       throw error;
     }
   }
@@ -112,7 +106,6 @@ class PaymentClient {
       });
       return response.data;
     } catch (error) {
-      console.error(`Failed to verify order ${orderId}:`, error);
       throw error;
     }
   }
