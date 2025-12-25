@@ -80,27 +80,6 @@ async function handlePaymentSuccess(data: PaystackWebhookPayload['data']): Promi
 }
 
 /**
- * Handle charge.success event
- */
-async function handleChargeSuccess(data: PaystackWebhookPayload['data']): Promise<void> {
-  logger.info('Processing charge success', {
-    reference: data.reference,
-    amount: data.amount,
-  });
-
-  try {
-    // TODO: Update subscription status
-    // TODO: Send receipt
-    logger.info('Charge success processed', { reference: data.reference });
-  } catch (error) {
-    logger.error('Failed to process charge success', error as Error, {
-      reference: data.reference,
-    });
-    throw error;
-  }
-}
-
-/**
  * Handle invoice.payment_failed event
  */
 async function handlePaymentFailed(data: PaystackWebhookPayload['data']): Promise<void> {

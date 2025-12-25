@@ -36,26 +36,6 @@ export default function NotFound() {
             404
           </motion.h1>
 
-          {/* Subheading */}
-          <motion.h2 
-            className="text-2xl font-bold font-heading text-center text-slate-700 mb-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-          >
-            Page Not Found
-          </motion.h2>
-
-          {/* Description */}
-          <motion.p 
-            className="text-center text-slate-600 mb-8 leading-relaxed"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-          >
-            The page you're looking for doesn't exist or has been moved. This could be due to an invalid payment link, expired order, or incorrect URL.
-          </motion.p>
-
           {/* About Ordaro Pay */}
           <motion.div 
             className="bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200 rounded-lg p-6 mb-8"

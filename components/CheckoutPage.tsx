@@ -212,7 +212,7 @@ export default function CheckoutPage({ orderId }: CheckoutPageProps) {
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-gray-100 disabled:cursor-not-allowed"
                   />
                   <p className="text-xs text-gray-500 mt-1">
-                    We'll send your receipt to this email
+                    We&apos;ll send your receipt to this email
                   </p>
                 </div>
 

@@ -1,7 +1,7 @@
 import CryptoJS from 'crypto-js';
 
 export class EncryptionService {
-  private static readonly algorithm = 'AES';
+  // private static readonly algorithm = 'AES';
   private static readonly key = process.env.ENCRYPTION_KEY || '';
   private static readonly iv = process.env.ENCRYPTION_IV || '';
 

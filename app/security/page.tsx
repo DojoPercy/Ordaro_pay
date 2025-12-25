@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Shield, Lock, CheckCircle2, AlertCircle, Eye, Zap, ShieldCheck, FileText } from 'lucide-react';
 
 export default function SecurityPage() {
@@ -140,10 +141,12 @@ export default function SecurityPage() {
                   transition={{ duration: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  <img
+                  <Image
                     src="/paystack-logo.svg"
                     alt="Paystack"
-                    className="w-20 h-8 mx-auto mb-2"
+                    width={80}
+                    height={32}
+                    className="mx-auto mb-2"
                   />
                   <p className="text-xs text-slate-600 font-semibold">Certified Processor</p>
                 </motion.div>

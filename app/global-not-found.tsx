@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { AlertTriangle, Home, Mail, ShieldCheck, FileText, Lock } from 'lucide-react';
 import '@/styles/fonts.css';
 import '@/styles/globals.css';
@@ -41,7 +42,7 @@ export default function GlobalNotFound() {
 
               {/* Description */}
               <p className="text-center text-slate-600 mb-8 leading-relaxed">
-                The page you're looking for doesn't exist or has been moved. This could be due to an invalid payment link, expired order, or incorrect URL.
+                The page you&apos;re looking for doesn&apos;t exist or has been moved. This could be due to an invalid payment link, expired order, or incorrect URL.
               </p>
 
               {/* About Ordaro Pay */}
@@ -72,10 +73,12 @@ export default function GlobalNotFound() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
                   {/* Paystack Badge */}
                   <div className="bg-white rounded-lg p-3 shadow-sm border border-slate-200 text-center">
-                    <img
+                    <Image
                       src="/paystack-logo.svg"
                       alt="Paystack"
-                      className="w-16 h-6 mx-auto mb-1"
+                      width={64}
+                      height={24}
+                      className="mx-auto mb-1"
                     />
                     <p className="text-xs text-slate-600 font-semibold">Certified</p>
                   </div>

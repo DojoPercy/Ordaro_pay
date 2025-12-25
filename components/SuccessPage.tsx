@@ -34,6 +34,7 @@ export default function SuccessPage({ orderId }: SuccessPageProps) {
         document.body.removeChild(confetti);
       };
     }
+    return undefined;
   }, [order]);
 
   if (isLoading) {
@@ -143,7 +144,7 @@ export default function SuccessPage({ orderId }: SuccessPageProps) {
           {/* Next Steps */}
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
             <p className="text-sm text-blue-900">
-              <strong>What's Next?</strong> Your order is being prepared. You'll receive a confirmation email shortly.
+              <strong>What&apos;s Next?</strong> Your order is being prepared. You&apos;ll receive a confirmation email shortly.
             </p>
           </div>
 
@@ -177,7 +178,7 @@ export default function SuccessPage({ orderId }: SuccessPageProps) {
         <div className="bg-white rounded-lg shadow-md p-6">
           <h3 className="font-semibold text-gray-900 mb-4">Need Help?</h3>
           <p className="text-gray-600 mb-4">
-            If you have any questions about your order or payment, please don't hesitate to contact us.
+            If you have any questions about your order or payment, please don&apos;t hesitate to contact us.
           </p>
           <a
             href="mailto:support@ordaro.com"

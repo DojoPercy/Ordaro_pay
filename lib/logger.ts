@@ -50,7 +50,6 @@ class Logger {
         message,
         data,
       };
-      console.debug(this.formatLog(entry));
       this.sendToService(entry);
     }
   }
@@ -63,7 +62,6 @@ class Logger {
         message,
         data,
       };
-      console.log(this.formatLog(entry));
       this.sendToService(entry);
     }
   }

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, Shield, Zap, BarChart3, Lock, CheckCircle2, Smartphone, ShieldCheck, FileText, Lock as LockIcon } from 'lucide-react';
 
@@ -206,10 +207,11 @@ export default function HomePage() {
               viewport={{ once: true }}
             >
               <div className="bg-white rounded-lg p-4 shadow-md border border-slate-200">
-                <img
+                <Image
                   src="/paystack_logo.png"
                   alt="Paystack"
-                  className="w-32 "
+                  width={128}
+                  height={48}
                 />
               </div>
               <p className="text-sm text-slate-600 text-center font-semibold">
