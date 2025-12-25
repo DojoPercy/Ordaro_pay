@@ -1,0 +1,13 @@
+/* Effra Font - Local */
+@font-face {
+  font-family: 'Effra';
+  src: url('/Effra_Std_Rg.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Ensure Effra is available for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Effra', sans-serif !important;
+}
