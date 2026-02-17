@@ -11,6 +11,7 @@ export interface Order {
   items: OrderItem[];
   customer?: Customer;
   organization: Organization;
+  currency?: string;
   createdAt: string;
   updatedAt: string;
 }

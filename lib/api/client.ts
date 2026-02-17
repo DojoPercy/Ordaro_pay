@@ -7,7 +7,7 @@ import {
   ApiError,
 } from './types';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_ORDARO_API_URL || 'http://localhost:3000';
+const API_BASE_URL = "http://localhost:5050/api/v1";
 
 class ApiClient {
   private client: AxiosInstance;
@@ -72,6 +72,18 @@ class ApiClient {
   async getOrder(orderId: string): Promise<Order> {
     try {
       const response = await this.client.get<Order>(`/orders/${orderId}`);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  /**
+   * Fetch public order details
+   */
+  async getPublicOrder(encryptedOrderId: string): Promise<Order> {
+    try {
+      const response = await this.client.get<Order>(`/payments/public/orders/${encryptedOrderId}`);
       return response.data;
     } catch (error) {
       throw error;

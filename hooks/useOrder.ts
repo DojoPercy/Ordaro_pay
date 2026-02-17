@@ -25,7 +25,8 @@ export function useGetOrder(
         throw { message: 'Order ID is required' } as QueryError;
       }
       try {
-        return await apiClient.getOrder(orderId);
+        // orderId here is actually the encryptedOrderId from the URL
+        return await apiClient.getPublicOrder(orderId);
       } catch (error: any) {
         throw {
           message: error?.message || 'Failed to fetch order',

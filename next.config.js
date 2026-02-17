@@ -2,9 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    globalNotFound: true,
-  },
+  // experimental: {
+  //   globalNotFound: true,
+  // },
   images: {
     remotePatterns: [
       {

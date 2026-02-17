@@ -73,7 +73,7 @@ class PaymentClient {
   ): Promise<InitializePaymentResponse> {
     try {
       const response = await this.client.post<InitializePaymentResponse>(
-        '/api/payments/initialize',
+        '/payments/initialize',
         request
       );
       return response.data;
@@ -88,7 +88,7 @@ class PaymentClient {
   async getPaymentStatus(orderId: string): Promise<PaymentStatusPollingResponse> {
     try {
       const response = await this.client.get<PaymentStatusPollingResponse>(
-        `/api/payments/${orderId}/status`
+        `/payments/public/orders/${orderId}/status`
       );
       return response.data;
     } catch (error) {
@@ -101,7 +101,7 @@ class PaymentClient {
    */
   async verifyOrder(orderId: string): Promise<any> {
     try {
-      const response = await this.client.post('/api/orders/verify', {
+      const response = await this.client.post('/orders/verify', {
         orderId,
       });
       return response.data;

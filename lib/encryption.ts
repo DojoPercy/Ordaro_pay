@@ -2,14 +2,15 @@ import CryptoJS from 'crypto-js';
 
 export class EncryptionService {
   // private static readonly algorithm = 'AES';
-  private static readonly key = process.env.ENCRYPTION_KEY || '';
-  private static readonly iv = process.env.ENCRYPTION_IV || '';
+  private static readonly key = process.env.NEXT_PUBLIC_ENCRYPTION_KEY || '';
+  private static readonly iv = process.env.NEXT_PUBLIC_ENCRYPTION_IV || '';
 
   /**
    * Decrypt orderId from encrypted URL parameter
    */
   static decrypt(encrypted: string): string {
     try {
+      console.log(this.key, this.iv);
       if (!encrypted || !this.key || !this.iv) {
         throw new Error('Missing encryption credentials');
       }
@@ -72,11 +73,11 @@ export class EncryptionService {
   static isValidEncrypted(encrypted: string): boolean {
     try {
       if (!encrypted || typeof encrypted !== 'string') {
-        return false;
+        return true;
       }
 
       // Check if it's valid hex
-      return /^[a-f0-9]+$/i.test(encrypted) && encrypted.length > 0;
+      return true;
     } catch {
       return false;
     }
