@@ -100,7 +100,7 @@ export default function CheckoutPage({ orderId }: CheckoutPageProps) {
         currency: order.currency || 'NGN',
         ref: response.paystackReference,
         access_code: response.paystackAccessCode,
-        callback: (transaction: any) => {
+        callback: () => {
           // Payment successful
           router.push(`/success/${orderId}`);
         },
