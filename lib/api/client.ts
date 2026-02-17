@@ -7,7 +7,7 @@ import {
   ApiError,
 } from './types';
 
-const API_BASE_URL = "http://localhost:5050/api/v1";
+const API_BASE_URL = process.env.NEXT_PUBLIC_ORDARO_API_URL || "http://localhost:5050/api/v1";
 
 class ApiClient {
   private client: AxiosInstance;
