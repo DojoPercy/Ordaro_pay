@@ -10,7 +10,7 @@ export class EncryptionService {
    */
   static decrypt(encrypted: string): string {
     try {
-      console.log(this.key, this.iv);
+
       if (!encrypted || !this.key || !this.iv) {
         throw new Error('Missing encryption credentials');
       }
